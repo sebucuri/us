@@ -1,0 +1,19 @@
+name: blank
+
+on:
+  push:
+
+jobs:
+  once:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        inner: ["pursue", "illustrate", "pluralism", "enormous", "crash"]
+        beast: ["ocean", "so-called", "strict", "quite"]
+    steps:
+    - uses: actions/checkout@v6
+    - uses: actions/setup-java@v5
+      with:
+        distribution: 'zulu'
+        java-version: '25'
+    - run: java -jar Rg
